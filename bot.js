@@ -22,7 +22,7 @@ if(!message.channel.guild) return;
   //start of create role 
   if(!role){
     rainbow =  message.guild.createRole({
-   name: "Ayman_ALmonster",//the role will create name
+   name: "Rainbow bot.",//the role will create name
    color: "#000000",//the default color
    permissions:[]//the permissions
  //end of create role
@@ -35,7 +35,7 @@ message.channel.send('Done The Rainbow Role Setup Has Been Completed')//if the s
 client.on('ready', () => {//new ready event
   setInterval(function(){
       client.guilds.forEach(g => {
-                  var role = g.roles.find('Ayman_ALmonster', 'Rainbow bot.');//rainbow role name
+                  var role = g.roles.find('name', 'Rainbow bot.');//rainbow role name
                   if (role) {
                       role.edit({color : "RANDOM"});
                   };
